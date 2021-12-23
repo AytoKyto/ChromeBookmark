@@ -1,17 +1,10 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+  <script src="popup.js"></script>
 </head>
-<body style="width: 400px">
-    <h1>Welcome to Bookmarks gestionaire</h1>
-    <div>Search Bookmarks: <input id="search"></div>
-    <button id="add" >Create Bookmarks</button>
-    <div id="bookmarks"></div>
-    <div id="editdialog"></div>
-    <div id="deletedialog"></div>
-    <div id="adddialog"></div>
-    <script src="popup.js"></script>
+<body style="width: 600vw; height: 100vh;">
+  <div>Search Bookmarks: <input id="search"></div>
+  <ul id="bookmark_list">
+  </ul>
 </body>
-  </html>
+</html>

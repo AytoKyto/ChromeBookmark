@@ -1,15 +1,18 @@
 {
-    "name": "My Bookmarks",
-    "description": "A browser action with a popup dump of all bookmarks, including search, add, edit and delete.",
-    "version": "1.1",
-    "manifest_version": 2,
-    "permissions": [
-      "bookmarks"
-    ],
-    "browser_action": {
-        "default_title": "My Bookmarks",
-        "default_icon": "icon.png",
-        "default_popup": "popup.html"
-    },
-    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+  "name": "My Bookmarks",
+  "description": "A browser action with a popup dump of all bookmarks, including search, add, edit and delete.",
+  "version": "1.1",
+  "manifest_version": 2,
+  "permissions": [
+    "bookmarks"
+  ],
+  "browser_action": {
+    "default_title": "My Bookmarks",
+    "default_popup": "popup.html",
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
   }
+}
