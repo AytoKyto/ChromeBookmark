@@ -5,20 +5,30 @@
 </head>
 
 <body class="bodySectionOne" style="width: 500px; height: 100px;">
-    <div class="wrapperPopup">
-        <div class="wrapperLogo">
-            <img src="logo2.png" alt="logo">
-        </div>
-        <div class="wrapperContent">
-            <div>Search Bookmarks: <input id="search"></div>
-            <ul id="bookmark_list">
-            </ul>
+    <div class="BigWrapperOne">
+        <div class="wrapperPopup">
+            <div class="wrapperLogo">
+                <img src="logo2.png" alt="logo">
+            </div>
+            <div class="wrapperContent">
+                <div>Recherche un site: <input id="search"></div>
+                <div class="wrapperFav" id="bookmark_list">
+                </div>
+            </div>
         </div>
         <style>
             .bodySectionOne {
                 background-color: #13141B;
                 color: #ACADB1;
+            }
+            .BigWrapperOne {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
                 padding: 50px;
+                width: 100vw;
+                height: 100vh;
             }
         </style>
 </body>
