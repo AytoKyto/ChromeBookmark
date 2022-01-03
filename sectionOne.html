@@ -14,7 +14,12 @@
             <div class="wrapperContent">
                 <div class="wrapperFav" id="bookmark_list">
                 </div>
-                <div id="bookmark_list_folder">
+                <div class="wrapperFolder">
+                    <div id="bookmark_list_folder_name">
+
+                    </div>
+                    <div id="bookmark_list_folder">
+                    </div>
                 </div>
             </div>
         </div>
@@ -22,25 +27,16 @@
             .bodySectionOne {
                 background-color: #13141B;
                 color: #ACADB1;
-
             }
+
             .wrapperLogo {
                 display: flex;
                 justify-content: center;
                 margin-top: 10vw;
             }
 
-            #bookmark_list {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin-top: 50px;
-                margin-bottom: 5vw;
-                padding-left: 10vw;
-                padding-right: 10vw;
-            }
-            #bookmark_list_folder {
+            #bookmark_list,
+            .bookmarkClassLi {
                 display: flex;
                 align-items: center;
                 justify-content: left;
@@ -50,21 +46,40 @@
                 padding-left: 10vw;
                 padding-right: 10vw;
             }
-            #bookmark_list_folder li {
+
+            #bookmark_list_folder_name {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                flex-wrap: wrap;
+                margin-top: 50px;
+                margin-bottom: 5vw;
+                padding-left: 10vw;
+                padding-right: 10vw;
+            }
+
+            #bookmark_list_folder_name li,
+            .bookmarkClassLi li {
                 font-size: 1.3em;
                 color: #ACADB1;
                 text-decoration: none;
                 list-style: none;
                 margin: 1vw;
             }
-            #bookmark_list_folder p{
+
+            #bookmark_list_folder_name p,
+            .bookmarkClassLi p {
                 text-transform: uppercase;
             }
-            #bookmark_list_folder p:hover{
+
+            #bookmark_list_folder_name p:hover,
+            .bookmarkClassLi p:hover {
                 color: #05C7A2;
                 cursor: pointer;
             }
-            #bookmark_list li {
+
+            #bookmark_list li,
+            .bookmarkClassLi li {
                 background-color: #2E2E2E;
                 padding: 20px;
                 width: 15vw;
@@ -78,13 +93,15 @@
                 overflow: hidden;
             }
 
-            #bookmark_list li:hover {
+            #bookmark_list li:hover,
+            .bookmarkClassLi li:hover {
                 background-color: #181A22;
                 color: #05C7A2;
                 transition: 0.3s;
             }
 
-            #bookmark_list a {
+            #bookmark_list a,
+            .bookmarkClassLi a {
                 color: white;
                 font-style: normal;
                 font-weight: normal;
@@ -94,11 +111,10 @@
             }
 
             .BigWrapperOne {
-                display: flex;
+                margin-top: -4vw;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                padding: 50px;
                 width: 100vw;
                 height: 100vh;
             }
