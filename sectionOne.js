@@ -10,13 +10,17 @@ var bookmarkTreeNodes = chrome.bookmarks.getTree(
 
             for (var element of bookmarkTreeNodes[i].children[i].children) {
                 console.log(element);
-                document.getElementById("bookmark_list").innerHTML += "<li><img src=" + imgUrl + element.url + "><a href=" + element.url + " >" + element.title + "</a></li>";
-                //   document.querySelectorAll("#bookmark_list li a").forEach(function (a) {
-                //     a.setAttribute('target', '_blank');
-                //   })
+                if (element.url !== undefined) {
+                    document.getElementById("bookmark_list").innerHTML += "<li><a href=" + element.url + " >" + element.title + "</a><p>" + element.url + "</p></li>";
+                    //   document.querySelectorAll("#bookmark_list li a").forEach(function (a) {
+                    //     a.setAttribute('target', '_blank');
+                    //   })
+                }
+                if (element.url == undefined) {
+                    document.getElementById("bookmark_list_folder").innerHTML += "<li><p onclik>" + element.title + "</p></li>";
+                    
+                }
             }
-
-
         }
     });
 
