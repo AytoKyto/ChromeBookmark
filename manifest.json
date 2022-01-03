@@ -1,11 +1,14 @@
 {
   "name": "My Bookmarks",
+  
   "description": "A browser action with a popup dump of all bookmarks, including search, add, edit and delete.",
   "version": "1.1",
   "manifest_version": 2,
+  "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'",
   "permissions": [
     "bookmarks"
   ],
+  
   "browser_action": {
     "default_title": "My Bookmarks",
     "default_popup": "popup.html",
