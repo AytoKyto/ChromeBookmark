@@ -2,6 +2,7 @@
 
 <head>
     <script src="sectionOne.js"></script>
+
 </head>
 
 <body class="bodySectionOne" style="width: 500px; height: 100px;">
@@ -11,8 +12,9 @@
                 <img src="logo2.png" alt="logo">
             </div>
             <div class="wrapperContent">
-                <div>Recherche un site: <input id="search"></div>
                 <div class="wrapperFav" id="bookmark_list">
+                </div>
+                <div id="bookmark_list_folder">
                 </div>
             </div>
         </div>
@@ -20,7 +22,77 @@
             .bodySectionOne {
                 background-color: #13141B;
                 color: #ACADB1;
+
             }
+            .wrapperLogo {
+                display: flex;
+                justify-content: center;
+                margin-top: 10vw;
+            }
+
+            #bookmark_list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 50px;
+                margin-bottom: 5vw;
+                padding-left: 10vw;
+                padding-right: 10vw;
+            }
+            #bookmark_list_folder {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                flex-wrap: wrap;
+                margin-top: 50px;
+                margin-bottom: 5vw;
+                padding-left: 10vw;
+                padding-right: 10vw;
+            }
+            #bookmark_list_folder li {
+                font-size: 1.3em;
+                color: #ACADB1;
+                text-decoration: none;
+                list-style: none;
+                margin: 1vw;
+            }
+            #bookmark_list_folder p{
+                text-transform: uppercase;
+            }
+            #bookmark_list_folder p:hover{
+                color: #05C7A2;
+                cursor: pointer;
+            }
+            #bookmark_list li {
+                background-color: #2E2E2E;
+                padding: 20px;
+                width: 15vw;
+                height: 10vw;
+                margin: 1vw;
+                border-radius: 10px;
+                display: flex;
+                align-items: left;
+                justify-content: flex-end;
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            #bookmark_list li:hover {
+                background-color: #181A22;
+                color: #05C7A2;
+                transition: 0.3s;
+            }
+
+            #bookmark_list a {
+                color: white;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 16px;
+                text-decoration: none;
+            }
+
             .BigWrapperOne {
                 display: flex;
                 justify-content: center;
