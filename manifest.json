@@ -1,18 +1,19 @@
 {
-  "name": "My Bookmarks",
+  "name": "My Bookmarks Gestion BETA",
   
   "description": "A browser action with a popup dump of all bookmarks, including search, add, edit and delete.",
   "version": "1.1",
   "manifest_version": 2,
   "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'",
   "permissions": [
-    "bookmarks"
+    "bookmarks",
+    "https://www.peekalink.io/*"
   ],
   
   "browser_action": {
     "default_title": "My Bookmarks",
     "default_popup": "popup.html",
-    "icons": {
+    "default_icon": {
       "16": "16.png",
       "48": "48.png",
       "128": "128.png"

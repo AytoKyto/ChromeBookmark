@@ -7,17 +7,38 @@ var bookmarkTreeNodes = chrome.bookmarks.getTree(
             for (var element of bookmarkTreeNodes[i].children[i].children) {
                 // console.log(element);
                 if (element.url !== undefined) {
+                    // fetch("http://api.linkpreview.net/?key=06a1c44c88292c68a372aa1248da6394&fields=image_x,icon_type,locale&q=" + element.url, {
+                    //     method: 'GET',
+                    // })
+                    //     .then(function (response) {
+                    //         return response.json();
+                    //     }
+                    //     )
+                    //     .then(function (data) {
+                    //         console.log(data.image);
+                    //         // for (var i = 0; i < data.length; i++) {
+                    //         //     document.getElementById("bookmark_list").innerHTML += "<li><a target='_blank' href=" + data[i].url + " ><img src=" + imgUrl + data[i].url + ">" + data[i].title + "</a></li>";
+                    //         // }
+                    //     }
+                    //     )
+                    //     .catch(function (error) {
+                    //         console.log(error);
+                    //     }
+                    //     );
+                    // let style = "background-image: url(" + data.image + ");background-size: containt;";
                     document.getElementById("bookmark_list").innerHTML += "<li><a href=" + element.url + " >" + element.title + "</a><p>" + element.url + "</p></li>";
                 }
                 if (element.url == undefined) {
                     var divState = false;
                     var divClass = "bookmarkClassLi";
                     var urlId = "#" + element.title;
-                    document.getElementById("bookmark_list_folder_name").innerHTML += "<li><p></p><a href="+urlId+">" + element.title + "</a></li>";
+                    let length = element.children.length;
+                    document.getElementById("bookmark_list_folder_name").innerHTML += "<li><a href="+urlId+"><p class='length'>"+length+"</p><p class='titreFolder'>"+element.title+"</p></a></li>";
                     if (divState == false) {
-                        document.getElementById("bookmark_list_folder").innerHTML += "<div class="+divClass+" id=" + element.title + "></div>";
+                        document.getElementById("bookmark_list_folder").innerHTML += "<div class=" + divClass + " ><p id=" + element.title + " class='folderTitle titreFolderName'>" + element.title + "</p></div>";
                         divState = true;
                     }
+
                     for (var element2 of element.children) {
                         //console.log(element2);
                         if (element2.url !== undefined) {
@@ -27,6 +48,8 @@ var bookmarkTreeNodes = chrome.bookmarks.getTree(
                 }
             }
         }
+
+
     });
 
 

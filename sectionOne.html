@@ -29,7 +29,9 @@
                 background-color: #13141B;
                 color: #ACADB1;
             }
-
+            .titreFolderName {
+                width: 100vw;
+            }
             .wrapperLogo {
                 display: flex;
                 justify-content: center;
@@ -37,7 +39,7 @@
             }
 
             #bookmark_list,
-            .bookmarkClassLi {
+            .bookmarkClassLi{
                 display: flex;
                 align-items: center;
                 justify-content: left;
@@ -54,16 +56,28 @@
                 display: flex;
                 align-items: left;
                 justify-content: left;
-                flex-direction: column;
+                flex-direction: row;
                 flex-wrap: wrap;
                 margin-top: 50px;
                 margin-bottom: 5vw;
                 padding-left: 10vw;
                 padding-right: 10vw;
             }
-
+            .length {
+                font-size: 6em;
+                opacity: 0.1;
+                margin-bottom: -0%;
+                text-align: center;
+            }
+            .titreFolder {
+                font-size: 1em;
+                margin-bottom: -0%;
+                text-align: center;
+                text-transform: uppercase;
+            }
             #bookmark_list_folder_name li,
-            .bookmarkClassLi li {
+            .bookmarkClassLi li,
+            #bookmark_list_folder_name li  {
                 font-size: 1.3em;
                 color: #ACADB1;
                 text-decoration: none;
@@ -91,7 +105,8 @@
             }
 
             #bookmark_list li,
-            .bookmarkClassLi li {
+            .bookmarkClassLi li,
+            #bookmark_list_folder_name li {
                 background-color: #2E2E2E;
                 padding: 20px;
                 width: 15vw;
@@ -106,7 +121,8 @@
             }
 
             #bookmark_list li:hover,
-            .bookmarkClassLi li:hover {
+            .bookmarkClassLi li:hover,
+            #bookmark_list_folder_name li:hover {
                 background-color: #181A22;
                 color: #05C7A2;
                 transition: 0.3s;
