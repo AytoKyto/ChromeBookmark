@@ -15,7 +15,7 @@ var bookmarkTreeNodes = chrome.bookmarks.getTree(
                         }
                         )
                         .then(function (data) {
-                            return data;
+                           // return data;
                         //    console.log(data); 
                     // let style = " style='background-image: url(" + data.image + ");background-size: containt;'";
                      //  console.log(data.image);
@@ -28,7 +28,7 @@ var bookmarkTreeNodes = chrome.bookmarks.getTree(
                             console.log(error);
                         }
                         );
-                        console.log(data);
+                      //  console.log(data);
                     document.getElementById("bookmark_list").innerHTML += "<li ><a href=" + element.url + " >" + element.title + "</a><p>" + element.url + "</p></li>";
                 }
                 if (element.url == undefined) {
